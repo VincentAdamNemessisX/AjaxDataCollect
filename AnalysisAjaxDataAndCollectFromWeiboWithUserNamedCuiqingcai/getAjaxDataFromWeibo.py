@@ -9,8 +9,7 @@ from urllib.parse import urlencode
 import requests
 import pymongo
 
-client = pymongo.MongoClient("mongodb+srv://vincent:ZTXic3344"
-                             "@tempcluster.kslgvab.mongodb.net/?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://vincent:ZTXic3344@tempcluster.kslgvab.mongodb.net/?retryWrites=true&w=majority")
 db = client['test']
 
 base_url = 'https://m.weibo.cn/api/container/getIndex?'
@@ -60,3 +59,4 @@ def save_to_mongo(result):
         print('Saved to Mongo', result)
         return True
     return False
+# Path: AnalysisAjaxDataAndCollectFromWeiboWithUserNamedCuiqingcai/main.py
